@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Watercooler News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1", maxium-scale="1">
+<!-- JQuery Mobile CSS CDN -->
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- stylesheet to look like an iphone -->
+<link href="http://taitems.github.io/iOS-Inspired-jQuery-Mobile-Theme/ios_inspired/styles.css" rel="stylesheet" /> 
+<!-- JQuery Mobile CDN -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- VERY IMPORTANT THE FOLLOWING MUST BE ADDED SO JQUERY MOBILE DOESN'T HAVE TO BE REFRESHED, AJAX WILL NOT WORK OTHERWISE -->
+<script>
+	$(document).on("mobileinit", function() {
+	 $.extend( $.mobile , {
+	 	pageLoadErrorMessage:'Either the page cannot be found or it cannot be loaded.'
+	 });
+ });
+</script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="script.js"></script>
+<script src="events.js"></script>
+</head>
+<body>
+		<div data-role="page" data-theme="c">
+        	<div data-role="header">
+            	<h1>Watercooler News</h1>
+            </div>
+            <div data-role="content" >
+            	<ul id="info" data-role="listview" data-inset="true"></ul>
+            </div>
+            <div data-role="footer" data-position="fixed">
+            	<div data-role="navbar">
+                	<ul>
+                    	<li><a href="#" id="news" data-icon="info">News</a></li>
+                        <li><a href="#" id="sports" data-icon="gear">Sports</a></li>
+                        <li><a href="#" id="entertainment" data-icon="grid">Entertainment</a></li>
+                    </ul>
+                </div><!-- end of navbar -->
+            </div>
+        </div><!-- end of page -->
+	
+</body>
+</html>
